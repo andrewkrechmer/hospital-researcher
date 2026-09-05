@@ -1,0 +1,17 @@
+# pnpm v11 ignores dependency build scripts unless they are approved here. Prisma
+# needs its postinstall to fetch query engines, otherwise `pnpm exec prisma` and
+# any @prisma/client import fail at runtime. `onlyBuiltDependencies` is the
+# pnpm 10 mechanism; `allowBuilds` is the pnpm 11 replacement. Both are listed so
+# the repo installs cleanly on either major.
+onlyBuiltDependencies:
+  - prisma
+  - "@prisma/engines"
+  - "@prisma/client"
+
+allowBuilds:
+  prisma: true
+  "@prisma/engines": true
+  "@prisma/client": true
+  sharp: true
+  esbuild: true
+  unrs-resolver: true

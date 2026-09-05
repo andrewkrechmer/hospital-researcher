@@ -1,0 +1,38 @@
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Environment
+.env*
+!.env.example
+
+# Local databases, imports, exports, and backups
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.dump
+*.backup
+data/
+imports/
+exports/
+backups/
+
+# Test / coverage output
+coverage/
+
+# Editor & OS
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.tsbuildinfo
